@@ -1,0 +1,165 @@
+ * {
+  /* pour maîtriser width et flex-basis */
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  /* correction bug IE de min-height non appliqué à body */
+  flex-direction: column;
+}
+body {
+  /* crée un contexte flex pour ses enfants */
+  display: flex;
+  /* affichage vertical */
+  flex-direction: column;
+  /* toute la hauteur du viewport */
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffff;
+  font-family: arial, sans-serif;
+}
+.wrapper {
+  /* occupe la hauteur restante */
+  flex: 1 1 auto;
+  /* crée un contexte flex pour ses enfants */
+  display: flex;
+}
+
+/*NAVBAR*/
+
+nav{
+  width: 100%;
+  height: 2em;
+  color: #ffffff;
+  background-color: #121212; 
+  order: -1;
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+nav a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav-item{
+  margin-top: 8px;
+}
+#hamburger{
+  display:none;
+  width:100%;
+  height:50px;
+}
+.icon-bars{
+  text-align: left;
+  margin-right: 25px;
+  margin-top: 9px;
+}
+
+/*HEADER*/
+
+header {
+  background: #ffffff;
+  height: 6em;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+}
+.logo-img-txt{
+  display: flex;
+  height: 6em;
+  justify-content: center;
+  align-items: center;
+}
+/*ASIDE*/
+
+aside {
+  width: 8em;
+  color: #ffffff;
+  background-color: #616161;
+}
+
+/*MAIN*/
+
+.room-content {
+  /* occupe la largeur restante */
+  flex: 1;
+  border-top: 5px solid #616161;
+}
+
+/*FOOTER*/
+
+footer {
+  color: #ffffff;
+  background-color: #121212;
+  height: 8em;
+}
+
+/* Responsive (700px screen) */
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  nav {
+    width: auto;
+    height: auto;
+  }
+  #menu
+  {
+    display:none;
+  } 
+  #hamburger
+  {
+    display:block;
+  }
+  aside {
+    width: auto;
+    height: 3em;
+  }
+  nav,
+  aside,
+  .roomcontent {
+    /* pour écraser la valeur 0, due au flex: 1 */
+    flex-basis: auto;
+  }
+  nav {
+    /* nav reprend sa place */
+    order: 0;
+  }
+}
+
+/* Responsive (fenêtres de moins de 320px) */
+@media (max-width: 320px) {
+  .wrapper {
+    /* affichage vertical */
+    flex-direction: column;
+  }
+  nav {
+    /* pour écraser la valeur 10em */
+    width: auto;
+    height: auto;
+  }
+  #menu
+  {
+    display:none;
+  } 
+  #hamburger
+  {
+    display:block;
+  }
+  aside {
+    width: auto;
+    height: 3em;
+  }
+  nav,
+  aside,
+  .roomcontent {
+    /* pour écraser la valeur 0, due au flex: 1 */
+    flex-basis: auto;
+  }
+  nav {
+    /* nav reprend sa place */
+    order: 0;
+  }
+}
+
+    
+      
+
