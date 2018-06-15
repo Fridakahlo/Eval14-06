@@ -1,18 +1,13 @@
  * {
-  /* pour maîtriser width et flex-basis */
   box-sizing: border-box;
 }
 
 body {
-  /* crée un contexte flex pour ses enfants */
- /* display: flex;*/
-  /* affichage vertical */
   flex-direction: column;
-  /* toute la hauteur du viewport */
   min-height: 100vh;
   margin: 0;
   background: #ffffff;
-  font-family: arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .wrapper {
   /* occupe la hauteur restante */
@@ -98,39 +93,6 @@ header {
 }
 /*ASIDE*/
 
-/*aside {
-  float: left;
-  width: 8em;
-  color: #ffffff;
-  background-color: #616161;
-  text-align: center;
-  line-height: 25px;
-  padding-top: 10px;
-  padding-right: 2px;
-  padding-left: 2px;  
-  font-family: 'Source Sans Pro', sans-serif;
-}
- aside .aside-list ul li{
-  list-style: none;
-  line-height: 20px;
-  margin-top: 10px;
-  padding-right: 2px;
-  padding-left: 2px;  
-}
-.aside ul{
-  width: 100%;
-  display: inline;
-  text-align: center;
-}
-aside a{
-  color: #ffffff;
-  text-decoration: none;
-}
-aside a:hover{
-   text-decoration: none; 
-   color: #ef9303;
-}*/
-/* css for <aside class='sidebar'> */
 aside{
   float: left;
   color: #ffffff;
@@ -146,7 +108,9 @@ aside a:hover{
    text-decoration: none; 
    color: #ef9303;
 }
-aside.sidebar { width: 25%; float:left; }
+aside.sidebar {
+ width: 25%; float:left; 
+}
 aside.sidebar ul {
   width:100%;
   margin: 0px;
@@ -181,20 +145,24 @@ aside.sidebar ul li h3.widget-title {
 
 /*MAIN*/
 
-.room-content {
-  /* occupe la largeur restante */
-  /*flex: 1;*/
+p.post-content {
+  margin-right: 3em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.room-title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 22px;
+  line-height: 20px;
 }
 article.post {
   width: 33%;
-  /*margin-left: 2em;
-  margin-top: 1em;*/
-
 }
 section.content { 
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
+   margin-left: 1em;
+   margin-top: 1em;
  }
 /*.content article { width:100%; float:left; padding: 0 0 1em; margin: 0 0 1em; border-bottom: 1px solid #ddd; }*/
 @media (max-width: 700px) {
@@ -209,6 +177,9 @@ section.content {
     justify-content: space-around;
 
   }
+  section.content {
+    margin-left: 0;
+  }
 }
 
 /*FOOTER*/
@@ -222,7 +193,6 @@ footer {
   border-top: 1px solid #000;
   text-align: center;
   width: 100%;
-  bottom: 0px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 footer a {
@@ -242,6 +212,7 @@ footer a:hover {
 
 .container {
   max-width: 1200px;
+  line-height: 0.8;
 }
  
 
