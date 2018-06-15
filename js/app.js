@@ -1,8 +1,8 @@
-function hamburger_click()
-{
-  var hamburgerElement = document.getElementById("hamburger");
-  var menuElement = document.getElementById("menu");
- 
-  hamburgerElement.style.display = "none";
-  menuElement.style.display = "block";
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
